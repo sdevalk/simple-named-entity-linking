@@ -1,0 +1,65 @@
+meta {
+  name: Match entities (Wikidata)
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/api/match
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "content": "Zijn aanstelling geschiedde op persoonlijke aanbeveling van paus Pius IV (1499-1565). Dat Van der Ameijden voldeed aan de hoge standaard van het koor, blijkt wel uit het feit dat hij tot aan zijn dood in 1605 eraan verbonden bleef. In 1593 en 1594 was hij zelfs Maestro di Capella (de leider van de kapel). Enkele van zijn composities bleven bewaard, waaronder een mis en een madrigaal (vocaal muziekstuk met wereldlijke tekst) die overgeleverd zijn in een handschrift in de Vaticaanse Bibliotheek. Zijn graf is te vinden in de kapel van de Santa Maria del’Anima nabij de Piazza Navona, waar hij werd bijgezet naast andere Brabanders, onder wie kardinaal Willem van Enckenvoirt (1464-1534). In de Sint-Petruskerk in Oirschot werd onlangs een replica van zijn epitaaf geplaatst.",
+    "type": "text",
+    "languageCode": "nl",
+  "reconciliation": {
+    "sources": {
+      "date": [
+        {
+          "endpointUrl": "https://wikidata.reconci.link/nl/api",
+          "limit": 3,
+          "scoreOfAtLeast": 90
+        }
+      ],
+      "event": [
+        {
+          "endpointUrl": "https://wikidata.reconci.link/nl/api",
+          "limit": 3,
+          "scoreOfAtLeast": 90
+        }
+      ],
+      "location": [
+        {
+          "endpointUrl": "https://wikidata.reconci.link/nl/api",
+          "limit": 3,
+          "scoreOfAtLeast": 90
+        }
+      ],
+      "subject": [
+        {
+          "endpointUrl": "https://wikidata.reconci.link/nl/api",
+          "limit": 3,
+          "scoreOfAtLeast": 90
+        }
+      ],
+      "organization": [
+        {
+          "endpointUrl": "https://wikidata.reconci.link/nl/api",
+          "limit": 3,
+          "scoreOfAtLeast": 90
+        }
+      ],
+      "person": [
+        {
+          "endpointUrl": "https://wikidata.reconci.link/nl/api",
+          "limit": 3,
+          "scoreOfAtLeast": 90
+        }
+      ]
+    }
+  }
+  }
+}

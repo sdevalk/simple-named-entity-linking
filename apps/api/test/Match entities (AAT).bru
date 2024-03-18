@@ -1,0 +1,28 @@
+meta {
+  name: Match entities (AAT)
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/api/match
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "content": "Koos Aarts groeide op in Dongen, een dorp dat sterk in opkomst was als centrum van schoenmakerij en leerlooierij.",
+    "type": "text",
+    "languageCode": "nl",
+    "reconciliation": {
+      "sources": {
+        "subject": [
+          {
+            "endpointUrl": "https://termennetwerk-api.netwerkdigitaalerfgoed.nl/reconcile/http://vocab.getty.edu/aat/sparql"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@snel/api",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "npm-run-all --parallel build:*",
+    "build:css": "tailwindcss -i ./src/demonstrator/input.css -o ./public/assets/style.css --minify",
+    "build:server": "tsup",
+    "dev": "NODE_ENV=development npm-run-all --parallel dev:*",
+    "dev:css": "tailwindcss -i ./src/demonstrator/input.css -o ./public/assets/style.css --watch",
+    "dev:server": "tsx watch ./src/index.ts",
+    "start": "node ./dist/index.js",
+    "test": "vitest --coverage",
+    "test:once": "vitest --run",
+    "vercel-build": "turbo run build && cp -r dist/* api"
+  },
+  "dependencies": {
+    "@hono/node-server": "1.4.0",
+    "@hono/zod-validator": "0.1.11",
+    "@snel/extractor": "*",
+    "@snel/matcher": "*",
+    "@snel/reconciler": "*",
+    "defu": "6.1.4",
+    "got": "14.2.0",
+    "hono": "4.0.8",
+    "pino": "8.19.0",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@snel/tsconfig": "*",
+    "@tailwindcss/forms": "0.5.7",
+    "msw": "2.2.2",
+    "npm-run-all2": "6.1.2",
+    "tailwindcss": "3.4.1",
+    "tsx": "4.7.1"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": "esm",
+    "splitting": false,
+    "sourcemap": false,
+    "clean": true,
+    "dts": true
+  }
+}

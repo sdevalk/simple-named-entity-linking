@@ -1,0 +1,19 @@
+meta {
+  name: Extract entities
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/api/extract
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "content": "Henri van Abbe werd geboren te Amsterdam op 8 januari 1880. Hij was het achtste kind van Jenneken Renssen en Jacob van Abbe. De familie Renssen was gereformeerd; de familie Van Abbe joods. In 1906 trouwde Henri van Abbe met Allegonda Maria van Reeken. Zij was in 1885 geboren in Tiel en rooms-katholiek. Henri zou later eveneens tot dit kerkgenootschap toetreden. Uit het huwelijk werden vijf kinderen geboren. Twee meisjes overleden jong. Van de drie zoons was de oudste, Henri jr., gehandicapt. De twee anderen, Jan en Albert, zouden later bij het bedrijf van hun vader betrokken worden. Henri van Abbe overleed op 18 november 1940.\n\nGemengd huwelijk\n\nDe ouders van Henri van Abbe waren niet officieel getrouwd. Vader Jacob erkende echter de zes nog levende kinderen toen hij in 1891 met Jenneken huwde. Waarom zij die stap pas toen zetten is niet bekend. Mogelijk hield het verband met het feit dat de familie Van Abbe joods was en de familie Renssen gereformeerd. Wat men noemde 'gemengde' huwelijken konden in die tijd vaak niet op instemming van de familie rekenen.\n\n \n\nDiamanten en sigaren\n\nVader Jacob was juwelier van beroep. Samen met een broer had hij in Amsterdam een diamantslijperij annex winkel, een in die tijd niet ongebruikelijke combinatie. Over de omvang van de onderneming is weinig bekend. Volgens de familie-overlevering was het \"een nogal respectabel bedrijf\", wat dit inhield is echter niet duidelijk. In ieder geval was de familie vrij vermogend.\n\nZoon Henri werkte na zijn middelbare schoolopleiding enige tijd als leerling-tabaksmakelaar. Met een gift van 10.000 gulden van zijn vader begon hij in 1900 een sigarenfabriekje in de Amsterdamse Rustenburgerstraat. Opnieuw volgens mededeling uit familiekring was het Amsterdamse bedrijfje aanvankelijk niet erg succesvol. Dit zou met name het gevolg zijn geweest van het grote aantal arbeidsconflicten, dat zich in die tijd in de Amsterdamse sigarenindustrie voordeed. Ook Van Abbe kreeg zijn deel ervan.",
+    "type": "text",
+    "languageCode": "nl"
+  }
+}

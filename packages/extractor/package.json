@@ -1,0 +1,29 @@
+{
+  "name": "@snel/extractor",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest --coverage",
+    "test:once": "vitest --run"
+  },
+  "dependencies": {
+    "@google-cloud/language": "6.2.0",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@snel/tsconfig": "*"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": "esm",
+    "splitting": false,
+    "sourcemap": false,
+    "clean": true,
+    "dts": true
+  }
+}

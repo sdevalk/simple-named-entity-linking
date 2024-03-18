@@ -1,0 +1,3 @@
+{
+  "extends": "@snel/tsconfig/base.json"
+}

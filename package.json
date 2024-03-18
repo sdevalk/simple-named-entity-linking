@@ -1,0 +1,32 @@
+{
+  "name": "snel",
+  "type": "module",
+  "packageManager": "npm@9.5.1",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "test": "turbo run test",
+    "test:once": "turbo run test:once",
+    "fix": "gts fix",
+    "lint": "gts lint"
+  },
+  "devDependencies": {
+    "@snel/tsconfig": "workspace:*",
+    "@types/node": "20.11.24",
+    "@vitest/coverage-v8": "1.4.0",
+    "gts": "5.2.0",
+    "tsup": "8.0.2",
+    "turbo": "1.12.4",
+    "typescript": "5.2.2",
+    "vitest": "1.4.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

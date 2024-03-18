@@ -1,0 +1,31 @@
+{
+  "name": "@snel/matcher",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest --coverage",
+    "test:once": "vitest --run"
+  },
+  "dependencies": {
+    "@snel/extractor": "*",
+    "@snel/reconciler": "*",
+    "pino": "8.19.0",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@snel/tsconfig": "*"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": "esm",
+    "splitting": false,
+    "sourcemap": false,
+    "clean": true,
+    "dts": true
+  }
+}

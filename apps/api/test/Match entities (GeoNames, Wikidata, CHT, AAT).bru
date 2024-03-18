@@ -1,0 +1,41 @@
+meta {
+  name: Match entities (GeoNames, Wikidata, CHT, AAT)
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:3000/api/match
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "content": "Vincent van Gogh werd geboren in het Brabantse Zundert. Hij zocht zijn toevlucht in de natuur",
+    "type": "text",
+    "languageCode": "nl",
+    "reconciliation": {
+      "sources": {
+        "location": [
+          {
+            "endpointUrl": "https://termennetwerk-api.netwerkdigitaalerfgoed.nl/reconcile/https://demo.netwerkdigitaalerfgoed.nl/geonames"
+          }
+        ],
+        "person": [
+          {
+            "endpointUrl": "https://wikidata.reconci.link/nl/api"
+          }
+        ],
+        "subject": [
+          {
+            "endpointUrl": "https://termennetwerk-api.netwerkdigitaalerfgoed.nl/reconcile/https://data.cultureelerfgoed.nl/PoolParty/sparql/term/id/cht"
+          },
+          {
+            "endpointUrl": "https://termennetwerk-api.netwerkdigitaalerfgoed.nl/reconcile/http://vocab.getty.edu/aat/sparql"
+          }
+        ]
+      }
+    }
+  }
+}

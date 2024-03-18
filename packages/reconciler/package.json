@@ -1,0 +1,33 @@
+{
+  "name": "@snel/reconciler",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "exports": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest --coverage",
+    "test:once": "vitest --run"
+  },
+  "dependencies": {
+    "async-cache-dedupe": "2.1.0",
+    "fastq": "1.17.1",
+    "got": "14.2.0",
+    "pino": "8.19.0",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "@snel/tsconfig": "*",
+    "msw": "2.2.2"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": "esm",
+    "splitting": false,
+    "sourcemap": false,
+    "clean": true,
+    "dts": true
+  }
+}

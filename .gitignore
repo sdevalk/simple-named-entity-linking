@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+
+# Build
+dist
+
+# Testing
+coverage
+
+# Misc
+.DS_Store
+*.pem
+tmp
+data
+public
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env
+
+# Turbo
+.turbo
+
+# Vercel
+apps/api/api/*
+!apps/api/api/index.js
