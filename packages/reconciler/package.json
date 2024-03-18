@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@snel/tsconfig": "*",
-    "msw": "2.2.2"
+    "msw": "2.2.7"
   },
   "tsup": {
     "entry": [
