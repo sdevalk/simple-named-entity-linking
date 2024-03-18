@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@hono/node-server": "1.4.0",
-    "@hono/zod-validator": "0.1.11",
+    "@hono/zod-validator": "0.2.0",
     "@snel/extractor": "*",
     "@snel/matcher": "*",
     "@snel/reconciler": "*",
