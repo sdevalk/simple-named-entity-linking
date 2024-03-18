@@ -17,7 +17,7 @@
     "vercel-build": "turbo run build && cp -r dist/* api"
   },
   "dependencies": {
-    "@hono/node-server": "1.4.0",
+    "@hono/node-server": "1.8.2",
     "@hono/zod-validator": "0.1.11",
     "@snel/extractor": "*",
     "@snel/matcher": "*",
